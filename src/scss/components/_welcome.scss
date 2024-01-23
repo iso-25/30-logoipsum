@@ -97,6 +97,12 @@
       width: 100%;
       width: 50rem;
       height: 50rem;
+      transition: var(--transition);
+      @include hover-on {
+        &:hover {
+          transform: var(--transform-img);
+        }
+      }
     }
 
     .img1 {
@@ -196,11 +202,11 @@
     }
 
     & svg {
-        transform: translateX(15%);
-      &:hover {
-        // transform: var(--transform-img);
-        transform: translateX(15%);
-        transform: scale(1.2);
+      transform: translateX(15%);
+      @include hover-on {
+        &:hover {
+          transform: translateX(15%) var(--transform-img);
+        }
       }
     }
   }

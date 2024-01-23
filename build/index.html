@@ -80,10 +80,10 @@
     <div class="welcome__secondary">
         <div class="welcome__video">
             <div class="welcome__video-play">
-                <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a href="/"><svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9167 12L0.916687 23.0833L0.916687 0.916656L14.9167 12Z" fill="#001A49"/>
     </svg>
-    ;
+    ;</a>
             </div>
         </div>
     </div>
@@ -496,26 +496,25 @@
 		const closeBtn = document.getElementById('closeBtn');
 		const Backdrop = document.getElementById('headerBackdrop');
 		const body = document.body;
-	
+
 		burgerBtn.addEventListener('click', () => {
-		  body.classList.add('_hidden');
+			body.classList.add('_hidden');
 		});
-	
+
 		closeBtn.addEventListener('click', () => {
-		  body.classList.remove('_hidden');
+			body.classList.remove('_hidden');
 		});
 
 		Backdrop.addEventListener('click', () => {
-		  body.classList.remove('_hidden');
+			body.classList.remove('_hidden');
 		});
 
 		burgerMenu.addEventListener('click', (event) => {
-      // Перевірка, чи клікнуто на елемент з класом "burger-menu"
-      if (event.target.classList.contains('header__ul')) {
-        body.classList.remove('_hidden');
-      }
-    });		
-	  </script>
+			if (event.target.classList.contains('header__ul')) {
+				body.classList.remove('_hidden');
+			}
+		});		
+	</script>
 </body>
 
 </html>

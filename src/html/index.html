@@ -43,26 +43,25 @@
 		const closeBtn = document.getElementById('closeBtn');
 		const Backdrop = document.getElementById('headerBackdrop');
 		const body = document.body;
-	
+
 		burgerBtn.addEventListener('click', () => {
-		  body.classList.add('_hidden');
+			body.classList.add('_hidden');
 		});
-	
+
 		closeBtn.addEventListener('click', () => {
-		  body.classList.remove('_hidden');
+			body.classList.remove('_hidden');
 		});
 
 		Backdrop.addEventListener('click', () => {
-		  body.classList.remove('_hidden');
+			body.classList.remove('_hidden');
 		});
 
 		burgerMenu.addEventListener('click', (event) => {
-      // Перевірка, чи клікнуто на елемент з класом "burger-menu"
-      if (event.target.classList.contains('header__ul')) {
-        body.classList.remove('_hidden');
-      }
-    });		
-	  </script>
+			if (event.target.classList.contains('header__ul')) {
+				body.classList.remove('_hidden');
+			}
+		});		
+	</script>
 </body>
 
 </html>
