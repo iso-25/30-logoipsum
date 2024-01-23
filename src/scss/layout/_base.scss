@@ -1,0 +1,85 @@
+html {
+  font-size: 1px;
+
+  @include tablet {
+    font-size: 0.9px;
+  }
+
+  @include tablet-small {
+    font-size: 0.8px;
+  }
+
+  @include mobile {
+    font-size: 0.7px;
+  }
+
+  @include mobile-small {
+    font-size: 0.6px;
+  }
+
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: var(--ff);
+  background-color: var(--bg);
+}
+
+._hidden {
+  overflow: hidden;
+}
+
+.main {
+  padding: 20px;
+}
+
+.wrapper{
+	max-width: 1440rem;
+	margin-inline: auto;
+  // background-color: var(--bg);
+  // z-index: -1;
+  overflow-x: hidden;
+}
+
+.container {
+  margin-inline: auto;
+  padding: 0 154rem;
+  background: transparent;
+
+  @include desktop-small {
+    padding: 0 100rem;
+  }
+
+  @include tablet {
+    padding: 0 50rem;
+  }
+
+}
+
+.title {
+  font: var(--f-title);
+  color: var(--color-title);
+}
+.desc {
+  font: var(--f-desc);
+  color: var(--color-desc);
+}
+
+.btn {
+  border-radius: 33rem;
+  background: var(--gradient-primary);
+  padding: 15rem 30rem;
+  color: var(--white);
+  transition: var(--transition);
+
+  @include hover-on {
+    &:hover {
+      color: var(--color-title);
+    }
+  }
+
+}

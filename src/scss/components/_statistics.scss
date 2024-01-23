@@ -1,0 +1,69 @@
+.statistic {
+  width: 100%;
+  padding-top: 100rem;
+  padding-bottom: 136rem;
+}
+
+.statistics {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 30rem 0;
+
+  border-radius: 21rem;
+  border: 1rem solid #e7eaeb;
+  background-color: var(--white);
+  position: relative;
+
+  &::before,
+  &::after {
+    @include pseudo-element;
+  }
+  &::before {
+    background: var(--gradient-primary);
+    width: 288rem;
+    height: 288rem;
+    left: -206rem;
+    bottom: -136rem;
+    z-index: -1;
+  }
+  &::after {
+    background: var(--gradient-circle);
+    width: 86rem;
+    height: 86rem;
+    left: -4rem;
+    bottom: -136rem;
+    z-index: -2;
+  }
+
+  @include mobile {
+    padding: 0 30rem;
+    grid-template-columns: 1fr;
+  }
+}
+.statistics-item {
+  padding: 20rem 0;
+  &__amount {
+    color: var(--color-title);
+    text-align: center;
+    font: var(--f-title-stat);
+  }
+
+  &__desc {
+    color: var(--color-desc);
+    text-align: center;
+    font: var(--f-btn-plan);
+    font-weight: 400;
+  }
+
+  &:not(:last-child) {
+    border-right: 1rem solid #e7eaeb;
+  }
+
+  @include mobile {
+    &:not(:last-child) {
+        border-right: none;
+        border-bottom: 1rem solid #e7eaeb;
+      }
+  }
+}

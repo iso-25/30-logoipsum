@@ -1,0 +1,143 @@
+.plan {
+  width: 100%;
+  padding-top: 29rem;
+  padding-bottom: 50rem;
+  position: relative;
+
+  &::before {
+    @include pseudo-element;
+    width: 382rem;
+    height: 382rem;
+    top: -136rem;
+    right: -408rem;
+    background: var(--gradient-circle);
+    z-index: -1;
+
+    @include desktop-small {
+      right: -354rem;
+    }
+
+    @include tablet {
+      right: -304rem;
+    }
+  }
+
+  &__title,
+  &__desc {
+    text-align: center;
+    max-width: 560rem;
+    margin-inline: auto;
+    padding: 0 20rem;
+  }
+
+  &__title {
+    margin-bottom: 20rem;
+    @include tablet-small {
+      margin-bottom: 15rem;
+    }
+  }
+  &__desc {
+    margin-bottom: 61rem;
+    @include tablet-small {
+      margin-bottom: 30rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30rem;
+  }
+}
+.plan-item {
+  display: flex;
+  padding: 40rem 50rem;
+  width: 100%;
+  align-items: center;
+
+  border-radius: 21rem;
+  background: var(--bg-gradient-item-plan);
+
+  @include tablet-small {
+    flex-direction: column;
+    text-align: center;
+    gap: 20rem;
+    width: 80%;
+  }
+  @include mobile {
+    padding: 20rem 25rem;
+    width: 100%;
+  }
+
+  &__icon {
+    background: var(--white);
+    filter: drop-shadow(0rem 8rem 16rem rgba(0, 0, 0, 0.05));
+    width: 64rem;
+    height: 64rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20rem;
+  }
+
+  &__title {
+    color: var(--color-title);
+    font: var(--f-title-plan);
+    margin-bottom: 20rem;
+  }
+
+  &__desc {
+    color: var(--color-desc);
+    font: var(--f-desc-plan);
+    max-width: 501rem;
+  }
+
+  &__btn {
+    display: flex;
+    padding: 18rem 0;
+    max-width: 278rem;
+    width: 100%;
+    max-height: 66rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    font: var(--f-btn-plan);
+
+    span:first-child {
+      padding: 5rem 38rem;
+    }
+    span:last-child {
+      padding: 5rem 34rem;
+      border-left: 1rem solid var(--c-border-line);
+    }
+
+    @include tablet {
+      padding: 15rem 20rem;
+
+      span:first-child {
+        padding: 5rem 20rem;
+      }
+      span:last-child {
+        padding: 5rem 20rem;
+      }
+    }
+
+    @include tablet-small {
+      margin-inline: auto;
+    }
+
+    @include mobile {
+      width: 70%;
+      padding: 7rem 10rem;
+      span:first-child {
+        padding: 5rem 10rem;
+      }
+      span:last-child {
+        padding: 5rem 10rem;
+      }
+    }
+  }
+}

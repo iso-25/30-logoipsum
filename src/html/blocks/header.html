@@ -1,0 +1,22 @@
+<div class="container">
+<header class="header">
+	<div class="header__logo">
+		@@include('components/svg-logo.html');
+	</div>
+	<div class="header__nav">
+		<div class="header__backdrop" id="headerBackdrop" onclick="navToggle()"></div>
+		<ul class="header__ul" id="headerUl">
+			<div class="header__ul-site">
+				<li class="header__li"><a class="header__a" href="/">Course topics</a></li>
+				<li class="header__li"><a class="header__a" href="/">What students say</a></li>
+			</div>
+			<div class="header__ul-akk">
+				<li class="header__li"><a class="header__a" href="/">Sign in</a></li>
+				<a href="/" class="btn header__btn">Get started</a>
+			</div>
+			<span class="material-icons icon-close" id="closeBtn" onclick="navToggle()">close</span>
+		</ul>
+		<span class="material-icons icon-menu" id="burgerBtn" onclick="navToggle()">menu</span>
+	</div>
+</header>
+</div>

@@ -1,0 +1,81 @@
+.lector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30rem;
+  margin-top: 55rem;
+  margin-bottom: 120rem;
+
+  @include tablet-small {
+    flex-direction: column-reverse;
+    gap: 10rem;
+  }
+
+  &-info {
+    &__title {
+      margin-bottom: 20rem;
+      max-width: 537rem;
+    }
+
+    &__desc {
+      max-width: 510rem;
+    }
+  }
+
+  &-img {
+    position: relative;
+    margin: 11rem 52rem 17rem 21rem;
+    z-index: 1;
+
+    &__container {
+      width: 354rem;
+      height: 354rem;
+      border-radius: 50%;
+      background: var(--gradient-primary);
+      filter: drop-shadow(0rem 4rem 4rem rgba(0, 0, 0, 0.25));
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      margin-inline: auto;
+
+      @include desktop-small {
+        width: 300rem;
+        height: 300rem;
+      }
+
+      @include tablet-small {
+        width: 254rem;
+        height: 254rem;
+      }
+    }
+
+    &::before,
+    &::after {
+      @include pseudo-element;
+      background: var(--gradient-circle);
+    }
+    &::before {
+      width: 88rem;
+      height: 88rem;
+      left: -21rem;
+      top: -11rem;
+    }
+    &::after {
+      width: 132rem;
+      height: 132rem;
+      opacity: 0.3;
+      right: -40rem;
+      bottom: -17rem;
+      z-index: -1;
+    }
+
+    & img {
+      transition: var(--transition);
+      @include hover-on {
+        &:hover {
+          transform: var(--transform-img);
+        }
+      }
+    }
+  }
+}
