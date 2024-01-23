@@ -1,6 +1,3 @@
-// import header from './modules/header.js';
-// header();
-
 
 import faq from './modules/faq.js';
 faq();

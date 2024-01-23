@@ -37,10 +37,6 @@
   --bg-item-swiper: rgba(76, 0, 112, 0.2);
   --c-border-line: #8639b5;
   --c-hover-txt: #9F07FF;
-
-  --c-primary: #0b8fed;
-  --c-text-white: #fff;
-  --c-border: #eee;
 }
 
 @include desktop-small {
@@ -70,17 +66,3 @@
     --f-btn-plan: normal 600 14rem / normal var(--ff);
   }
 }
-
-// @include tablet-small {
-//   :root {
-//     --f-title: normal 700 46rem/121.739% var(--ff-Montserrat);
-//     --f-desc: normal 400 20rem/150% var(--ff-Mulish);
-//   }
-// }
-
-// @include mobile {
-//   :root {
-//     --f-title: normal 700 46rem/121.739% var(--ff-Montserrat);
-//     --f-desc: normal 400 20rem/150% var(--ff-Mulish);
-//   }
-// }
